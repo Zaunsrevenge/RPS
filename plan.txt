@@ -7,3 +7,12 @@ What i've learned is that when you set a prompt to activate. You also need to se
 You won't have to worry about this if you aren't using .toLowerCase function but because we want the user to be able to not have to worry about capitalisation we have to pay attention to this. 
 
 The next thing that confused me but wasn't actually confusing after I understood was to set the null or cancelled prompt within the curly braces of its parent prompt so that the computer knows they are to run together as a family before executing any other code after.
+
+Results of Round Code Insights 
+else if is not the same as else if
+
+General Notes
+
+console.log can be super helpful for debugging. Issue wear the computer kept winning resolved by console logging the results of both parties to see behind the scenes whats going on.
+
+I don't really get the math.floor function
