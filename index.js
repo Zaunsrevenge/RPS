@@ -1,24 +1,24 @@
 const choices = ["rock", "paper", "scissors"]
 const winners = []
 function game() {
-    for (let i = 0; i <= 4; i++) {
-        playround();
+    for (let i = 1; i <= 5; i++) {
+        playround(i);
     }
+    document.querySelector('button').textContent = 'Play again!';
     logWins();
+    winnerDeclare();
 }
 
 // play the game 
 // play five rounds 
 // console based 
 
-function playround() {
+function playround(round) {
     const playerSelection = playerChoice();
     const computerSelection = computerChoice();
     const winner = checkWinner(playerSelection, computerSelection);
     winners.push(winner)
-    console.log(playerSelection)
-    console.log(computerSelection)
-    console.log(winner)
+    logRound(playerSelection, computerSelection, winner, round);
 
 }
 
@@ -82,6 +82,25 @@ function logWins() {
     console.log('Computer Wins', computerWins);
     console.log('ties', ties);
 
+
 }
 
+function logRound(playerChoice, computerChoice, winner, round) {
+    console.log('Round', round);
+    console.log('Player Chose', playerChoice);
+    console.log('Computer Chose', computerChoice);
+    console.log(winner, 'Won the round');
+    console.log('---------------------------')
+}
+
+function winnerDeclare() {
+    let playerWins = winners.filter((item) => item == 'Player').length;
+    let computerWins = winners.filter((item) => item == 'Computer').length;
+    let ties = winners.filter((item) => item == 'Tie').length;
+    if (playerWins > computerWins) {
+        console.log('NICE JOB YOU WON');
+    } else if (computerWins > playerWins) {
+        console.log('BOO YOU SUCK')
+    } else (console.log('meh boring... play again'))
+}
 game();
