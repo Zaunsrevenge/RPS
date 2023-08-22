@@ -1,0 +1,9 @@
+Player Section Insights
+
+Had major trouble with the player choice section and understanding the prompts. 
+
+What i've learned is that when you set a prompt to activate. You also need to set what happens if that prompt is cancelled or the result is null. If you don't when you use a function like .toLowerCase afterward the computer will try to change null to lowercase which it can't do and you will get an error. 
+
+You won't have to worry about this if you aren't using .toLowerCase function but because we want the user to be able to not have to worry about capitalisation we have to pay attention to this. 
+
+The next thing that confused me but wasn't actually confusing after I understood was to set the null or cancelled prompt within the curly braces of its parent prompt so that the computer knows they are to run together as a family before executing any other code after.
